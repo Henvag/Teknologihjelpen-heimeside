@@ -1,173 +1,130 @@
-<html>
-
+<!doctype html>
+<html lang="nb">
 <head>
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Teknologihjelpen: programvare og IT-hjelp fra Sunnfjord</title>
+  <meta name="description" content="Teknologihjelpen er et norsk enkeltpersonforetak som står bak Tenant Access, felles innlogging for små bedrifter, og som hjelper bedrifter og privatpersoner i Sunnfjord med IT.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="bilder/favicon.ico" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <script src="script.js"></script>
-  <script src="prefixfree.js"></script>
-
-  <link rel="shortcut icon" href="bilder/favicon.ico">
-
-
-  <script src="https://www.momentcrm.com/embed"></script>
-  <script>
-    MomentCRM('init', {
-      'teamVanityId': 'teknologihjelpen',
-      'doChat': true,
-      'doTracking': true,
-    });
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Teknologihjelpen",
+    "url": "https://teknologihjelpen.no",
+    "telephone": "+47 41 25 96 70",
+    "taxID": "829416042",
+    "areaServed": "Sunnfjord",
+    "owns": { "@type": "SoftwareApplication", "name": "Tenant Access", "url": "https://tenantaccess.me" }
+  }
   </script>
-
-
-
-
-
-
 </head>
-
-
 <body>
-
-  
-
-  <div id=".scroll">
-
-
-
-
-
-
-
-  <div id="outside">
-
-
-    <h1 id="logo">
-      <img id="outside-pic" src="bilder/Teknologibilde.png">
-
-    </h1>
-
-
-    <p>
-
-      <button onclick="location.href = 'https://teknologihjelpen.no/info-om-oss/info.html';" class="buttoninfo">Info om
-        oss </button>
-
-
-
-
-
-    </p>
-
-
-    <p>
-
-      <button onclick="location.href = 'https://teknologihjelpen.no/kontakt-oss/kontakt.html';"
-        class="buttonkontakt">Kontakt oss
-      </button>
-      
-
-
-
-      
-
-
-
-
-
-    </p>
-
-
-  
-
-    <p>
-
-      <p>
-
-
-        <button onclick="location.href = 'https://teknologihjelpen.no/kontakt-oss/kontakt.html';"
-          class="buttonteamviewer">TeamViewer
-        </button>
-  
-  
-  
-      </p>
-
-    
-
-
-
-
-    <p>
-      <button onclick="open_card()" class="button1">Klikk her for å gå til betaling</button>
-    </p>
-
-
-
-
-
-
-
-
-    <p id="livechat"> Snakk med oss på Live Chat!
-
-
-    </p>
-
-  </div>
-
-  <div id="inside">
-
-    <p id="inside-title">
-      Vi brukar Vipps som betalingsmåte!
-
-
-
-
-    </p>
-
-   
-    <img id="inside-pic" src="bilder/qrkode.png">
-  
-
-    <p id="message">
-      Scan QR koden eller trykk på knappen for å gå vidare
-    </p>
-
-    <p>
-
-
-      <button onclick="close_card()" class="button2">Tilbake</button>
-
-
-
-
-
-
-
-    </p>
-
-    <p>
-
-      <button class="button3">Klikk her for å betale </button>
-
-
-
-
-
-    </p>
-
-
-
-
-
-
-
-
-
-  </div>
-
-
+  <a class="skip" href="#innhald">Hopp til innholdet</a>
+
+  <header class="top">
+    <div class="wrap top-row">
+      <a class="brand" href="#">
+        <span class="mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M14.7 3.3a5 5 0 0 0-5.9 6.6l-5.5 5.5a2 2 0 0 0 2.8 2.8l5.5-5.5a5 5 0 0 0 6.6-5.9l-3 3-2.5-.6-.6-2.5 3-3z"/></svg>
+        </span>
+        Teknologihjelpen
+      </a>
+      <nav aria-label="Hovedmeny">
+        <a href="#tenant-access">Tenant Access</a>
+        <a href="#it-hjelp">IT-hjelp</a>
+        <a href="#om">Om oss</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="innhald">
+    <section class="hero wrap">
+      <h1>Programvare og IT&#8209;hjelp fra Sunnfjord.</h1>
+      <p class="lead">Teknologihjelpen er et norsk enkeltpersonforetak. Vi lager Tenant Access, felles innlogging for små bedrifter, og hjelper bedrifter og privatpersoner med data og nettverk.</p>
+      <div class="actions">
+        <a class="btn" href="https://tenantaccess.me">Se Tenant Access</a>
+        <a class="btn btn-secondary" href="#kontakt">Kontakt oss</a>
+      </div>
+    </section>
+
+    <section id="tenant-access" class="section">
+      <div class="wrap split">
+        <div>
+          <h2>Tenant Access</h2>
+          <p class="lead">En innlogging for alle verktøyene i bedriften. Ansatte logger inn med Google eller Microsoft, og administratoren styrer hvem som får tilgang til hva fra ett sted.</p>
+          <p><a class="link" href="https://tenantaccess.me">Gå til tenantaccess.me</a></p>
+        </div>
+        <ul class="facts">
+          <li>
+            <h3>Laget for små bedrifter</h3>
+            <p>For firma med 5 til 50 ansatte som bruker verktøy som Grafana, Outline og Gitea.</p>
+          </li>
+          <li>
+            <h3>Hver bedrift for seg</h3>
+            <p>Data fra én bedrift kan ikke leses av en annen. Skillet håndheves i selve databasen.</p>
+          </li>
+          <li>
+            <h3>For IT-konsulenter</h3>
+            <p>Konsulenter kan administrere flere kundebedrifter fra én konto.</p>
+          </li>
+          <li>
+            <h3>Priser i norske kroner</h3>
+            <p>Fakturert av Teknologihjelpen. Se gjeldende priser på tenantaccess.me.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="it-hjelp" class="section">
+      <div class="wrap split">
+        <div>
+          <h2>IT-hjelp</h2>
+          <p class="lead">Problemer med maskinvare eller programvare? Vi hjelper over nett i hele landet, og på stedet i Sunnfjord og omegn.</p>
+        </div>
+        <ul class="list">
+          <li><strong>Feilsøking</strong> Treg PC, programmer som ikke starter, skrivere og nettverk som ikke vil.</li>
+          <li><strong>Oppsett</strong> Ny PC, e-post, sikkerhetskopi og trådløst nett, for hjemmet eller kontoret.</li>
+          <li><strong>Fjernhjelp</strong> Vi kobler oss til maskinen din med TeamViewer mens du ser på. <a class="link" href="https://www.teamviewer.com/nb/download/">Last ned TeamViewer</a></li>
+          <li><strong>Betaling</strong> Med Vipps eller faktura når jobben er gjort.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="om" class="section">
+      <div class="wrap split">
+        <h2>Om oss</h2>
+        <div class="prose">
+          <p>Teknologihjelpen ble startet av Henrik som et enkeltpersonforetak for IT-hjelp i Sunnfjord. I dag er Tenant Access hovedproduktet, og Teknologihjelpen er selskapet som selger det, inngår avtaler og sender faktura.</p>
+          <p>Kunder av Tenant Access har altså en norsk avtalepart med organisasjonsnummer og telefon, ikke bare en nettside.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="kontakt" class="section">
+      <div class="wrap split">
+        <h2>Kontakt</h2>
+        <dl class="details">
+          <div><dt>Telefon</dt><dd><a class="link" href="tel:+4741259670">412 59 670</a></dd></div>
+          <div><dt>Organisasjonsnummer</dt><dd><a class="link" href="https://virksomhet.brreg.no/nb/oppslag/enheter/829416042">829 416 042</a></dd></div>
+          <div><dt>Selskapsform</dt><dd>Enkeltpersonforetak</dd></div>
+          <div><dt>Område</dt><dd>Sunnfjord og omegn, fjernhjelp i hele Norge</dd></div>
+        </dl>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap foot-row">
+      <span>Teknologihjelpen · Org.nr. 829 416 042</span>
+      <span><a href="https://tenantaccess.me">Tenant Access</a> · <a href="https://tenantaccess.me/personvern">Personvern</a></span>
+    </div>
+  </footer>
 </body>
-
 </html>
