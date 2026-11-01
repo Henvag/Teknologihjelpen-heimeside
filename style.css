@@ -44,7 +44,7 @@ a { color: inherit; }
 .skip { position: absolute; left: -9999px; }
 .skip:focus { left: 16px; top: 12px; z-index: 20; background: var(--surface); color: var(--ink); padding: 8px 12px; }
 
-.display, h1, h2, .big-phone, .foot-word, .num {
+.display, h1, h2, .foot-word, .num {
   font-family: var(--display);
   font-stretch: 125%;
   font-weight: 800;
@@ -209,12 +209,14 @@ h2 { font-size: clamp(32px, 5vw, 64px); line-height: 1; max-width: 16ch; }
 .contact { background: var(--wine); color: var(--cream); padding: 112px 0; }
 .contact-grid { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr); gap: 64px; align-items: center; }
 .contact-title { font-size: clamp(32px, 5vw, 64px); }
-.big-phone {
-  display: inline-block; margin-top: 8px;
-  font-size: clamp(44px, 6.6vw, 88px); line-height: 1; color: var(--signal); text-decoration: none;
-  font-variant-numeric: tabular-nums; white-space: nowrap;
+.big-mail {
+  display: inline-block; margin-top: 16px;
+  font-family: var(--display); font-stretch: 112%; font-weight: 700; letter-spacing: -0.015em;
+  font-size: clamp(22px, 3.4vw, 44px); line-height: 1.1; color: var(--signal);
+  text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 6px;
+  overflow-wrap: anywhere;
 }
-.big-phone:hover { color: var(--cream); }
+.big-mail:hover { color: var(--cream); }
 .contact-note { margin-top: 20px; color: var(--cream-muted); }
 
 .ticket {
@@ -235,7 +237,7 @@ h2 { font-size: clamp(32px, 5vw, 64px); line-height: 1; max-width: 16ch; }
 .ticket dl div { display: flex; justify-content: space-between; gap: 16px; padding: 10px 0; border-bottom: 1px solid var(--line); }
 .ticket dl div:last-child { border-bottom: 0; }
 .ticket dt { color: var(--muted); font-size: 15px; }
-.ticket dd { margin: 0; font-weight: 500; text-align: right; font-variant-numeric: tabular-nums; }
+.ticket dd { margin: 0; font-weight: 500; text-align: right; overflow-wrap: anywhere; font-variant-numeric: tabular-nums; }
 .ticket a { color: var(--wine); text-underline-offset: 3px; }
 
 /* Footer */
