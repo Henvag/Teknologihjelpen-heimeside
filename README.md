@@ -6,8 +6,10 @@ The website for Teknologihjelpen (enkeltpersonforetak, org.nr. 829 416 042), the
 Plain static HTML and CSS, no build step. Open `index.html` in a browser to preview.
 
 - `index.html`: the whole site, one page in Norwegian (bokmål).
-- `style.css`: follows the type and shape rules in Tenant Access's `DESIGN.md`; the accent is the
-  burgundy from the original logo.
+- `style.css`: burgundy from the original logo, Archivo (expanded) for headlines and Schibsted Grotesk
+  for text, the same text face as Tenant Access.
+- `script.js`: the hero figure, five tangled cables that sort themselves into their ports when they
+  come into view. Reduced motion shows the tidy state.
 - `info-om-oss/info.html`, `kontakt-oss/kontakt.html`: redirects from the old site's URLs.
 
 ## Deploy

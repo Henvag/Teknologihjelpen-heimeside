@@ -3,14 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Teknologihjelpen: programvare og IT-hjelp fra Sunnfjord</title>
-  <meta name="description" content="Teknologihjelpen er et norsk enkeltpersonforetak som står bak Tenant Access, felles innlogging for små bedrifter, og som hjelper bedrifter og privatpersoner i Sunnfjord med IT.">
+  <title>Teknologihjelpen: IT-hjelp og programvare fra Bergen</title>
+  <meta name="description" content="Teknologihjelpen er et enkeltpersonforetak i Bergen. Vi lager Tenant Access, felles innlogging for små bedrifter, og hjelper folk og firma med data, nett og skrivere.">
+  <meta name="theme-color" content="#5b162b">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="icon" href="bilder/favicon.ico" sizes="any">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,700..900&family=Schibsted+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -19,17 +21,17 @@
     "url": "https://teknologihjelpen.no",
     "telephone": "+47 41 25 96 70",
     "taxID": "829416042",
-    "areaServed": "Sunnfjord",
+    "areaServed": "Bergen",
     "owns": { "@type": "SoftwareApplication", "name": "Tenant Access", "url": "https://tenantaccess.me" }
   }
   </script>
 </head>
 <body>
-  <a class="skip" href="#innhald">Hopp til innholdet</a>
+  <a class="skip" href="#innhold">Hopp til innholdet</a>
 
   <header class="top">
     <div class="wrap top-row">
-      <a class="brand" href="#">
+      <a class="brand" href="#" aria-label="Teknologihjelpen, til toppen">
         <span class="mark" aria-hidden="true">
           <svg viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M14.7 3.3a5 5 0 0 0-5.9 6.6l-5.5 5.5a2 2 0 0 0 2.8 2.8l5.5-5.5a5 5 0 0 0 6.6-5.9l-3 3-2.5-.6-.6-2.5 3-3z"/></svg>
         </span>
@@ -41,89 +43,161 @@
         <a href="#om">Om oss</a>
         <a href="#kontakt">Kontakt</a>
       </nav>
+      <a class="call" href="tel:+4741259670">Ring 412 59 670</a>
     </div>
   </header>
 
-  <main id="innhald">
-    <section class="hero wrap">
-      <h1>Programvare og IT&#8209;hjelp fra Sunnfjord.</h1>
-      <p class="lead">Teknologihjelpen er et norsk enkeltpersonforetak. Vi lager Tenant Access, felles innlogging for små bedrifter, og hjelper bedrifter og privatpersoner med data og nettverk.</p>
-      <div class="actions">
-        <a class="btn" href="https://tenantaccess.me">Se Tenant Access</a>
-        <a class="btn btn-secondary" href="#kontakt">Kontakt oss</a>
-      </div>
-    </section>
-
-    <section id="tenant-access" class="section">
-      <div class="wrap split">
-        <div>
-          <h2>Tenant Access</h2>
-          <p class="lead">En innlogging for alle verktøyene i bedriften. Ansatte logger inn med Google eller Microsoft, og administratoren styrer hvem som får tilgang til hva fra ett sted.</p>
-          <p><a class="link" href="https://tenantaccess.me">Gå til tenantaccess.me</a></p>
+  <main id="innhold">
+    <!-- Hero: tangled cables that sort themselves into the right ports -->
+    <section class="hero">
+      <div class="wrap">
+        <h1>Vi rydder opp i teknologien.</h1>
+        <div class="hero-row">
+          <div class="hero-copy">
+            <p class="hero-lead">Teknologihjelpen er et lite selskap i Bergen. Vi lager Tenant Access, felles innlogging for små bedrifter, og hjelper folk og firma når data, nett og skrivere ikke vil.</p>
+            <div class="actions">
+              <a class="btn btn-cream" href="https://tenantaccess.me">Se Tenant Access</a>
+              <a class="btn btn-line" href="#it-hjelp">Få IT-hjelp</a>
+            </div>
+          </div>
+          <figure class="tangle">
+            <svg id="cables" viewBox="0 0 640 420" role="img" aria-labelledby="cables-title">
+              <title id="cables-title">Fem sammenfiltrede kabler som rettes ut og kobles til hver sin port: e-post, wi-fi, skriver, backup og innlogging.</title>
+            </svg>
+            <figcaption>
+              <span id="tangle-status" aria-live="polite">Alt koblet riktig.</span>
+              <button type="button" id="tangle-btn" class="text-btn">Floke dem til igjen</button>
+            </figcaption>
+          </figure>
         </div>
-        <ul class="facts">
-          <li>
-            <h3>Laget for små bedrifter</h3>
-            <p>For firma med 5 til 50 ansatte som bruker verktøy som Grafana, Outline og Gitea.</p>
-          </li>
-          <li>
-            <h3>Hver bedrift for seg</h3>
-            <p>Data fra én bedrift kan ikke leses av en annen. Skillet håndheves i selve databasen.</p>
-          </li>
-          <li>
-            <h3>For IT-konsulenter</h3>
-            <p>Konsulenter kan administrere flere kundebedrifter fra én konto.</p>
-          </li>
-          <li>
-            <h3>Priser i norske kroner</h3>
-            <p>Fakturert av Teknologihjelpen. Se gjeldende priser på tenantaccess.me.</p>
-          </li>
-        </ul>
       </div>
     </section>
 
+    <!-- Tenant Access -->
+    <section id="tenant-access" class="section paper">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="kicker">Vårt produkt</p>
+          <h2>En innlogging til alt i bedriften.</h2>
+        </div>
+        <div class="ta-grid">
+          <div class="ta-copy">
+            <p class="lead">Tenant Access lar ansatte logge inn med Google eller Microsoft, og gir administratoren ett sted å styre hvem som får tilgang til hva. Slutter noen, stenger du alt med ett klikk.</p>
+            <ol class="points">
+              <li><strong>For små bedrifter.</strong> Laget for firma med 5 til 50 ansatte som bruker verktøy som Grafana, Outline og Gitea.</li>
+              <li><strong>Hver bedrift for seg.</strong> Data fra én bedrift kan ikke leses av en annen. Skillet håndheves i selve databasen.</li>
+              <li><strong>For IT-konsulenter.</strong> Administrer flere kundebedrifter fra én konto.</li>
+              <li><strong>Norsk avtalepart.</strong> Priser i kroner, faktura fra Teknologihjelpen.</li>
+            </ol>
+            <p><a class="arrow-link" href="https://tenantaccess.me">Gå til tenantaccess.me <span aria-hidden="true">→</span></a></p>
+          </div>
+
+          <div class="flow" aria-hidden="true">
+            <div class="flow-person">
+              <span class="avatar">KN</span>
+              <span><b>Kari Nilsen</b><small>kari@firma.no</small></span>
+            </div>
+            <div class="flow-line"></div>
+            <div class="flow-hub">
+              <span class="mark mark-lg"><svg viewBox="0 0 24 24" width="18" height="18"><rect x="5" y="10" width="14" height="10" rx="2" fill="currentColor"/><path d="M8 10V7a4 4 0 0 1 8 0v3" fill="none" stroke="currentColor" stroke-width="2"/></svg></span>
+              <b>Tenant Access</b>
+              <small>Firma AS</small>
+            </div>
+            <div class="flow-fan">
+              <span class="flow-app ok">Grafana <i>Tilgang</i></span>
+              <span class="flow-app ok">Outline <i>Tilgang</i></span>
+              <span class="flow-app ok">Gitea <i>Tilgang</i></span>
+              <span class="flow-app no">Portainer <i>Kun admin</i></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- IT help -->
     <section id="it-hjelp" class="section">
-      <div class="wrap split">
-        <div>
-          <h2>IT-hjelp</h2>
-          <p class="lead">Problemer med maskinvare eller programvare? Vi hjelper over nett i hele landet, og på stedet i Sunnfjord og omegn.</p>
+      <div class="wrap">
+        <div class="section-head">
+          <p class="kicker">IT-hjelp</p>
+          <h2>Når teknologien står i veien.</h2>
         </div>
-        <ul class="list">
-          <li><strong>Feilsøking</strong> Treg PC, programmer som ikke starter, skrivere og nettverk som ikke vil.</li>
-          <li><strong>Oppsett</strong> Ny PC, e-post, sikkerhetskopi og trådløst nett, for hjemmet eller kontoret.</li>
-          <li><strong>Fjernhjelp</strong> Vi kobler oss til maskinen din med TeamViewer mens du ser på. <a class="link" href="https://www.teamviewer.com/nb/download/">Last ned TeamViewer</a></li>
-          <li><strong>Betaling</strong> Med Vipps eller faktura når jobben er gjort.</li>
+
+        <ul class="services">
+          <li>
+            <h3>Feilsøking</h3>
+            <p>Treg PC, programmer som ikke starter, skrivere og nett som ikke vil.</p>
+          </li>
+          <li>
+            <h3>Oppsett</h3>
+            <p>Ny PC, e-post, sikkerhetskopi og trådløst nett, hjemme eller på kontoret.</p>
+          </li>
+          <li>
+            <h3>Fjernhjelp</h3>
+            <p>Vi kobler oss til maskinen din over nett, uansett hvor i landet du er.</p>
+          </li>
+          <li>
+            <h3>På stedet</h3>
+            <p>Vi kommer hjem til deg eller ut på kontoret i Bergen og omegn.</p>
+          </li>
         </ul>
-      </div>
-    </section>
 
-    <section id="om" class="section">
-      <div class="wrap split">
-        <h2>Om oss</h2>
-        <div class="prose">
-          <p>Teknologihjelpen ble startet av Henrik som et enkeltpersonforetak for IT-hjelp i Sunnfjord. I dag er Tenant Access hovedproduktet, og Teknologihjelpen er selskapet som selger det, inngår avtaler og sender faktura.</p>
-          <p>Kunder av Tenant Access har altså en norsk avtalepart med organisasjonsnummer og telefon, ikke bare en nettside.</p>
+        <div class="steps">
+          <h3 class="steps-title">Slik får du fjernhjelp</h3>
+          <ol>
+            <li><span class="num">1</span><p><b>Ring oss</b> på <a class="ink-link" href="tel:+4741259670">412 59 670</a> og fortell hva som er galt.</p></li>
+            <li><span class="num">2</span><p><b>Last ned <a class="ink-link" href="https://www.teamviewer.com/nb/download/">TeamViewer</a></b> og les opp ID-en som står på skjermen.</p></li>
+            <li><span class="num">3</span><p><b>Se på mens vi fikser det.</b> Du betaler med Vipps eller faktura når jobben er gjort.</p></li>
+          </ol>
         </div>
       </div>
     </section>
 
-    <section id="kontakt" class="section">
-      <div class="wrap split">
-        <h2>Kontakt</h2>
-        <dl class="details">
-          <div><dt>Telefon</dt><dd><a class="link" href="tel:+4741259670">412 59 670</a></dd></div>
-          <div><dt>Organisasjonsnummer</dt><dd><a class="link" href="https://virksomhet.brreg.no/nb/oppslag/enheter/829416042">829 416 042</a></dd></div>
-          <div><dt>Selskapsform</dt><dd>Enkeltpersonforetak</dd></div>
-          <div><dt>Område</dt><dd>Sunnfjord og omegn, fjernhjelp i hele Norge</dd></div>
-        </dl>
+    <!-- About -->
+    <section id="om" class="section paper">
+      <div class="wrap about">
+        <p class="kicker">Om oss</p>
+        <p class="statement">Teknologihjelpen startet som IT-hjelp i Sunnfjord. Nå holder vi til i Bergen, og hovedproduktet er Tenant Access.</p>
+        <div class="about-cols">
+          <p>Teknologihjelpen er et enkeltpersonforetak drevet av Henrik. Det er selskapet som selger Tenant Access, inngår avtalene og sender fakturaene.</p>
+          <p>Kunder av Tenant Access har altså en norsk avtalepart med organisasjonsnummer og telefon, ikke bare en nettside. Vi gjør fortsatt IT-jobber for folk og firma i Bergen.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="kontakt" class="contact">
+      <div class="wrap contact-grid">
+        <div>
+          <p class="kicker kicker-light">Kontakt</p>
+          <h2 class="contact-title">Ring oss.</h2>
+          <a class="big-phone" href="tel:+4741259670">412 59 670</a>
+          <p class="contact-note">Fjernhjelp i hele Norge. Besøk i Bergen og omegn.</p>
+        </div>
+
+        <div class="ticket">
+          <div class="ticket-head">
+            <span>Firmaopplysninger</span>
+            <span class="ticket-no">Nr. 829 416 042</span>
+          </div>
+          <dl>
+            <div><dt>Navn</dt><dd>Teknologihjelpen</dd></div>
+            <div><dt>Selskapsform</dt><dd>Enkeltpersonforetak</dd></div>
+            <div><dt>Org.nr.</dt><dd><a href="https://virksomhet.brreg.no/nb/oppslag/enheter/829416042">829 416 042</a></dd></div>
+            <div><dt>Sted</dt><dd>Bergen</dd></div>
+            <div><dt>Fjernhjelp</dt><dd>Hele Norge</dd></div>
+          </dl>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="foot">
-    <div class="wrap foot-row">
-      <span>Teknologihjelpen · Org.nr. 829 416 042</span>
-      <span><a href="https://tenantaccess.me">Tenant Access</a> · <a href="https://tenantaccess.me/personvern">Personvern</a></span>
+    <div class="wrap">
+      <p class="foot-word" aria-hidden="true">Teknologihjelpen</p>
+      <div class="foot-row">
+        <span>Teknologihjelpen · Org.nr. 829 416 042 · Bergen</span>
+        <span><a href="https://tenantaccess.me">Tenant Access</a> · <a href="https://tenantaccess.me/personvern">Personvern</a></span>
+      </div>
     </div>
   </footer>
 </body>
