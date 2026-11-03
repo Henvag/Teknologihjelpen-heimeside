@@ -1,0 +1,30 @@
+/* Skrifttypene ligger på eget domene, så ingen besøkendes IP-adresse sendes til Google Fonts. SIL Open Font License 1.1 (fonts/OFL.txt). */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  font-stretch: 62% 125%;
+  src: url(fonts/archivo-latin-wdth-normal.woff2) format('woff2-variations');
+}
+@font-face {
+  font-family: 'Schibsted Grotesk';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url(fonts/schibsted-grotesk-latin-400-normal.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Schibsted Grotesk';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 500;
+  src: url(fonts/schibsted-grotesk-latin-500-normal.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Schibsted Grotesk';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 600;
+  src: url(fonts/schibsted-grotesk-latin-600-normal.woff2) format('woff2');
+}
