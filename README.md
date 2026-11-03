@@ -10,6 +10,9 @@ Plain static HTML and CSS, no build step. Open `index.html` in a browser to prev
   for text, the same text face as Tenant Access.
 - `script.js`: the hero figure, five tangled cables that sort themselves into their ports when they
   come into view. Reduced motion shows the tidy state.
+- `bilder/logo/`: the cable-tie logo (header lockup, 512 px logo for structured data, 1200 x 630 link preview
+  image). Source files and the generator live outside this repo in the project's logo folder.
+- `favicon.svg`, `favicon.ico`, `apple-touch-icon.png`, `icon-192.png`: browser and home-screen icons.
 - `info-om-oss/info.html`, `kontakt-oss/kontakt.html`: redirects from the old site's URLs.
 
 ## Deploy
