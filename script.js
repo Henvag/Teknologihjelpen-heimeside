@@ -10,11 +10,11 @@
 
   const W = 640, H = 420, LEFT = 46, RIGHT = 450, K = 8;
   const cables = [
-    { label: "E-post", color: "#f4ede4" },
-    { label: "Wi-fi", color: "#e8a3ae" },
-    { label: "Skriver", color: "#e2b65a" },
-    { label: "Backup", color: "#9fc6ae" },
-    { label: "Innlogging", color: "#a9c4de" },
+    { label: "Webapper", color: "#f4ede4" },
+    { label: "Databaser", color: "#e8a3ae" },
+    { label: "Innlogging", color: "#e2b65a" },
+    { label: "Skydrift", color: "#9fc6ae" },
+    { label: "IT-hjelp", color: "#a9c4de" },
   ];
   const rowY = (i) => 58 + i * 76;
 
@@ -174,4 +174,44 @@
     }
   }, { threshold: 0.4 });
   io.observe(svg);
+})();
+
+// Header: slides away while scrolling down, comes back on any scroll up (same as the Tenant Access
+// landing bar). Near the top it always shows. Picking a section in the bar keeps it in view while
+// the page scrolls there.
+(function () {
+  const bar = document.querySelector(".top");
+  if (!bar) return;
+  const HIDE_AFTER = 96; // px from the top before the bar may hide
+  const TRAVEL = 8; // px moved in one direction before it hides or comes back
+  let lastY = window.scrollY;
+  let travel = 0;
+  let holding = false;
+  const setHidden = (hidden) => bar.classList.toggle("is-hidden", hidden);
+
+  window.addEventListener("scroll", () => {
+    const y = window.scrollY;
+    const step = y - lastY;
+    lastY = y;
+    if (y < HIDE_AFTER) { travel = 0; setHidden(false); return; }
+    if (holding || step === 0) { travel = 0; return; }
+    travel = Math.sign(step) === Math.sign(travel) ? travel + step : step;
+    if (travel > TRAVEL) setHidden(true);
+    else if (travel < -TRAVEL) setHidden(false);
+  }, { passive: true });
+
+  bar.querySelectorAll('a[href^="#"]').forEach((link) => {
+    link.addEventListener("click", () => {
+      setHidden(false);
+      holding = true;
+      let timer = 0;
+      const release = () => {
+        holding = false;
+        window.clearTimeout(timer);
+        window.removeEventListener("scrollend", release);
+      };
+      window.addEventListener("scrollend", release);
+      timer = window.setTimeout(release, 1200); // browsers without scrollend
+    });
+  });
 })();

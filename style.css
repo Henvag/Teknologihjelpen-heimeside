@@ -20,6 +20,7 @@
   --display: "Archivo", "Arial Black", system-ui, sans-serif;
   --text: "Schibsted Grotesk", system-ui, sans-serif;
   --col: min(1160px, 100% - 3rem);
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -52,11 +53,24 @@ a { color: inherit; }
 }
 
 /* Header */
+/* Sticky bar. It slides away while scrolling down and comes back on any scroll up; keyboard focus
+   inside it always brings it back. The "Send e-post" button stays put: it moves down by exactly as
+   much as the bar moves up, on the same curve. Same behaviour as the Tenant Access landing bar. */
 .top {
+  --bar-h: 65px; /* the 64px row and its 1px rule */
   position: sticky; top: 0; z-index: 10;
   background: var(--wine);
   color: var(--cream);
   border-bottom: 1px solid var(--wine-line);
+  transition: transform 0.32s var(--ease);
+}
+.top.is-hidden:not(:focus-within) { transform: translateY(calc(-1 * var(--bar-h))); }
+.top.is-hidden:not(:focus-within) .call {
+  transform: translateY(var(--bar-h));
+  box-shadow: 0 0 0 1px rgba(29, 20, 22, 0.12), 0 6px 18px rgba(29, 20, 22, 0.28);
+}
+@media (prefers-reduced-motion: reduce) {
+  .top, .top .call { transition: none; }
 }
 .top-row { display: flex; align-items: center; gap: 28px; height: 64px; }
 .brand { display: inline-flex; align-items: center; gap: 10px; font-weight: 600; text-decoration: none; }
@@ -73,6 +87,7 @@ nav a:hover { color: var(--cream); }
   font-size: 15px; font-weight: 600; text-decoration: none;
   padding: 8px 14px; border-radius: 999px;
   background: var(--signal); color: var(--wine-deep);
+  transition: transform 0.32s var(--ease), box-shadow 0.32s var(--ease), background-color 0.15s ease;
 }
 .call:hover { background: var(--cream); }
 
