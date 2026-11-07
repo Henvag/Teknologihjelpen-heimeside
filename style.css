@@ -279,6 +279,7 @@ h2 { font-size: clamp(32px, 5vw, 64px); line-height: 1; max-width: 16ch; }
   white-space: nowrap; margin-bottom: 32px; letter-spacing: -0.035em;
 }
 .foot-row { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; }
+.foot-privacy { margin: 16px 0 0; max-width: 60ch; }
 .foot a { color: var(--cream-muted); }
 .foot a:hover { color: var(--cream); }
 
