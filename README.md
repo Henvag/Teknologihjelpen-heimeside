@@ -17,6 +17,5 @@ Plain static HTML and CSS, no build step. Open `index.html` in a browser to prev
 
 ## Deploy
 
-Any static host works. Since the domain's DNS is on Cloudflare, Cloudflare Pages is the simplest:
-connect this repo, leave the build command empty, set the output directory to `/`, then add
-`teknologihjelpen.no` as a custom domain.
+Hosted on Netlify (project "teknologihjelpen"), which also serves the DNS for `teknologihjelpen.no`.
+There is no build step: a merge to `main` publishes the site, and pull requests get a deploy preview.
